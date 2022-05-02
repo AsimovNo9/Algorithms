@@ -1,4 +1,15 @@
 def binary_search(list, item):
+
+    """Takes in a list and a searched for item, and returns the index of the item in that list
+
+    Args:
+        list (list): The list of different items to be searched through
+        item (int): The integer being searched for in the list
+
+    Returns:
+        mid (int): The index of the searched for item
+    """
+
     low = 0
     high = len(list) - 1
 
