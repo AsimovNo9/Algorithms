@@ -8,12 +8,33 @@ def sum(array):
         int: Sum of the numbers in the input list
     """
 
-    if len(array) == 1:
-        return array[0]
+    array_new = array.copy()
+    if len(array_new) == 1:
+        return array_new[0]
     else:
-        return array.pop(0) + sum(array)
+        return array_new.pop(0) + sum(array_new)
+
+
+def count(array):
+    """Recursive fucntion to count the number of items in a list
+
+    Args:
+        array (list): List with items to be counted
+
+    Returns:
+        int: Number of items in the list
+    """
+
+    array_new = array.copy()
+    if len(array_new) == 1:
+        return 1
+    else:
+        array_new.pop(0)
+        return 1 + count(array_new)
 
 
 if __name__ == "__main__":
     list = [1, 2, 3, 4, 5, 6, 7, 8]
-    sum(list)
+    print(sum(list))
+
+    # count(list)
